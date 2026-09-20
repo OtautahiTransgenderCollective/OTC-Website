@@ -94,6 +94,15 @@ nav {
 nav a:link {
     text-decoration: none;
     color: #04004D;
+    color: #ffffff;
+    font-weight: 800
+}
+
+nav button {
+    background-color: #5bcefa;
+    border: none;
+    border-radius: 1.89vmin;
+    padding: 5px 9px 5px;
 }
 
 
