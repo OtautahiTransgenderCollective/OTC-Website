@@ -91,7 +91,7 @@ nav {
     border-radius: 1.89vmin 1.89vmin 0px 0px;
 }
 
-nav a:link {
+nav a:link,a:visited {
     text-decoration: none;
     color: #04004D;
     color: #ffffff;
