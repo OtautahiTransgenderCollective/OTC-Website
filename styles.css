@@ -25,7 +25,11 @@
 }
 
 
-
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 /* Define universal styles within the body section, mainly used for defining default paragraph/text formatting. */
 body {
@@ -37,10 +41,7 @@ body {
 
 /* Define "main", used for website background colour shown behind the main-stack. */
 main {
-    padding-left: 1.8vmin;
-    padding-right: 1.8vmin;
-    padding-bottom: 8px;
-    padding-top: 8px;
+    padding: 0px;
 }
 
 
@@ -73,10 +74,30 @@ main {
 }
 
 .titleImageContainer img {
-    height: min(209px, 13.2vmax);
+    width: max(43.7vmin, 378px);
     margin-top: 13px;
     margin-bottom: 3px;
+    max-width: 100%;
+    min-width: 0%;
 }
+
+
+/* Define styles for various types of images */
+.meetupPoster {
+    width: min(34.9vmin, 334.6px);
+    height: auto;
+}
+
+.transFlagPole {
+    width: max(20.7vmin, 156.8px);
+    height: auto;
+}
+
+.photo {
+    width: max(45.8%, 400px);
+    height: auto;
+}
+
 
 svg {
     shape-rendering: geometricPrecision;
@@ -91,17 +112,22 @@ nav {
     border-radius: 1.89vmin 1.89vmin 0px 0px;
 }
 
-nav a:link,a:visited {
+nav a:link,
+nav a:visited {
+    font-family: SuperMindset;
     text-decoration: none;
-    color: #04004D;
     color: #ffffff;
-    font-weight: 800
+    font-size: clamp(9px, 3.8vw, 15.56pt);
+    -webkit-text-stroke-width: 2.66pt;
+    -webkit-text-stroke-color: #04004D;
+    paint-order: stroke fill;
 }
 
+/* Define the buttons in thenavigation bar. */
 nav button {
     background-color: #5bcefa;
     border: none;
-    border-radius: 1.89vmin;
+    border-radius: 10.387px;
     padding: 5px 9px 5px;
 }
 
@@ -177,7 +203,12 @@ for holding text and images), and their subset styles like text and images. */
     gap: 6.7px;
 }
 
-
+.textBox a:link,
+.textBox a:visited {
+    text-decoration: none;
+    color: #DF0D79;
+    font-weight: 600 
+}
 
 
 /* Redefine elements when screen is below a given width, used for viewing the website on mobile. */
@@ -187,7 +218,10 @@ for holding text and images), and their subset styles like text and images. */
         align-items: center;
     }
 
-    .container img {
-        width: 37vmin;
+    .container img.meetupPoster {
+        width: 100%;
+        max-width: 357.6px;
     }
+
+
 }
