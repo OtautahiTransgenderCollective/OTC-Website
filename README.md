@@ -8,20 +8,21 @@ website. If you want to contribute, check out the next section.
 
 This assumes knowledge of only HTML and CSS. We go barebones here as it's
 simpler when hosting and contributing, and the scope doesn't warrant a
-framework.
+framework. This assumes some knowledge of git, although if you need any more
+guidance than in this little guide you may ask another maintainer.
 
 ### Setup
 
-Firstly, make sure you've [forked the repository](https://github.com/OtautahiTransgenderCollective/OTC-Website/fork).
-Then clone it into a folder. If you need any more guidance you may ask another
-maintainer.
-
-Once downloaded, run the following commands in a terminal
+Ensure you have [git](https://git-scm.com/install/) and [Node](https://nodejs.org/en/download)
+downloaded, and that you've [forked the
+repository](https://github.com/OtautahiTransgenderCollective/OTC-Website/fork).
+Then clone it into a folder. Once downloaded, run the following commands in a terminal
 
 ```sh
 # Ensures all git hooks are synced between all people
 # Right now this is only checking that code maintains our standard
 git config --local core.hooksPath .githooks/
+npm install
 ```
 
 ### Developing
