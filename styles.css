@@ -35,7 +35,7 @@
 	--light-blue: #b0d2ef;
 	--white: #ffffff;
 	--blue: #5bcefa;
-	--pink: #df0d79;
+	--pink: #cb0069;
 	--text: #04004d;
 	--card-bg: #ffffff;
 	--link: var(--pink);
@@ -46,6 +46,9 @@
 
 	--radius-item: 8px;
 	--radius-card: 16px;
+
+	margin: 0;
+	padding: 0;
 }
 
 html,
@@ -68,7 +71,8 @@ main {
 	padding: 0px;
 }
 
-/* The main container that holds the entire stack of containers. */
+/* The main container that holds the enx
+* tire stack of containers. */
 .mainStack {
 	justify-content: center;
 	max-width: 800px;
@@ -207,8 +211,6 @@ for holding text and images), and their subset styles like text and images. */
 	font-family: var(--font-body);
 	font-weight: 700;
 	font-size: 20px;
-	padding: 0px;
-	margin: 0px;
 }
 
 .container ul {
@@ -242,6 +244,10 @@ for holding text and images), and their subset styles like text and images. */
 	text-decoration: none;
 	color: var(--link);
 	font-weight: 600;
+}
+
+.mt-6 {
+	margin-top: 24px;
 }
 
 /* Redefine elements when screen is below a given width, used for viewing the website on mobile. */
