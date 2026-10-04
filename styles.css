@@ -1,27 +1,51 @@
 /* Load and define fonts. */
 @font-face {
-	font-family: HKGroteskRegular;
+	font-family: "HKGrotesk";
 	src: url("fonts/HKGrotesk/HKGrotesk-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: HKGroteskItalic;
+	font-family: "HKGrotesk";
 	src: url("fonts/HKGrotesk/HKGrotesk-Italic.otf") format("opentype");
+	font-weight: 400;
+	font-style: italic;
 }
 
 @font-face {
-	font-family: HKGroteskBold;
+	font-family: "HKGrotesk";
 	src: url("fonts/HKGrotesk/HKGrotesk-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: SuperMindset;
+	font-family: "SuperMindset";
 	src: url("fonts/SuperMindset/Super Mindset.ttf");
 }
 
 @font-face {
-	font-family: SuperFoods;
+	font-family: "SuperFoods";
 	src: url("fonts/SuperFoods/Super Foods.ttf");
+}
+
+* {
+	--light-pink: #f0b5c4;
+	--light-blue: #b0d2ef;
+	--white: #ffffff;
+	--blue: #5bcefa;
+	--pink: #df0d79;
+	--text: #04004d;
+	--card-bg: #ffffff;
+	--link: var(--pink);
+
+	--font-body: "HKGrotesk";
+	--font-heading: "SuperFoods";
+	--font-nav: "SuperMindset";
+
+	--radius-item: 8px;
+	--radius-card: 16px;
 }
 
 html,
@@ -34,8 +58,9 @@ body {
 body {
 	line-height: 1.3;
 	color: #04004d;
-	font-family: HKGroteskRegular;
-	background: #b0d2ef;
+	font-family: var(--font-body);
+	background: var(--light-blue);
+	word-break: break-word;
 }
 
 /* Define "main", used for website background colour shown behind the main-stack. */
@@ -45,14 +70,11 @@ main {
 
 /* The main container that holds the entire stack of containers. */
 .mainStack {
-	background: #7fd0f1;
 	justify-content: center;
-	max-width: 937.8px;
+	max-width: 800px;
 	margin: 0 auto;
+	padding: 8px;
 	padding-top: 0px;
-	padding-left: 2.1vmin;
-	padding-right: 2.1vmin;
-	padding-bottom: 2.1vmin;
 	background-image: url("images/UI/transFlagBackgroundFadeOut.svg");
 	background-attachment: scroll;
 	background-position: top;
@@ -69,26 +91,33 @@ main {
 }
 
 .titleImageContainer img {
-	width: max(43.7vmin, 378px);
-	margin-top: 13px;
-	margin-bottom: 3px;
+	width: max(50%, 320px);
 	max-width: 100%;
-	min-width: 0%;
+	margin-top: 12px;
+	margin-bottom: 4px;
 }
 
 /* Define styles for various types of images */
 .meetupPoster {
-	width: min(34.9vmin, 334.6px);
+	width: 240px;
+	max-width: 100%;
 	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: var(--radius-item);
 }
 
 .transFlagPole {
-	width: max(20.7vmin, 156.8px);
+	width: 160px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto;
 }
 
 .photo {
-	width: 45.8%;
+	width: max(50%, 160px);
+	border-radius: var(--radius-item);
 	height: auto;
 }
 
@@ -99,29 +128,40 @@ svg {
 /* Define the navigation bar. */
 nav {
 	display: flex;
-	gap: min(8px, 1.4%);
-	padding: 10px;
-	background: #f0b5c4;
-	border-radius: 1.89vmin 1.89vmin 0px 0px;
+	gap: 8px;
+	padding: 12px;
+	margin-top: 12px;
+	background: var(--light-pink);
+	border-radius: var(--radius-card) var(--radius-card) 0px 0px;
 }
 
 nav a:link,
 nav a:visited {
-	font-family: SuperMindset;
+	font-family: var(--font-nav);
 	text-decoration: none;
-	color: #ffffff;
-	font-size: clamp(9px, 3.8vw, 15.56pt);
-	-webkit-text-stroke-width: 2.66pt;
-	-webkit-text-stroke-color: #04004d;
+	color: var(--white);
+	font-size: 18px;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: var(--text);
 	paint-order: stroke fill;
 }
 
-/* Define the buttons in thenavigation bar. */
+/* Define the buttons in the navigation bar. */
 nav button {
-	background-color: #5bcefa;
+	background-color: var(--blue);
 	border: none;
-	border-radius: 10.387px;
-	padding: 5px 9px 5px;
+	border-radius: var(--radius-item);
+	padding-top: 6px;
+	/* font has an odd thing where it looks closer to the top than the bottom
+	   so add a little extra padding on top to make it cleaner */
+	padding-bottom: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.dropshadow,
+.container {
+	filter: drop-shadow(8px 8px var(--text));
 }
 
 /* Define the containers (general use columnar containers
@@ -130,14 +170,13 @@ for holding text and images), and their subset styles like text and images. */
 	display: flex;
 	align-items: flex-start;
 	flex-direction: row;
-	background: white;
-	margin-bottom: 23px;
+	background: var(--card-bg);
+	margin-bottom: 24px;
 	padding: 0px;
-	border-radius: 1.89vmin;
+	border-radius: var(--radius-card);
 	overflow: hidden;
-	filter: drop-shadow(6.46px 6.46px #04004d);
-	padding: min(3.1vmin);
-	gap: 9.5px;
+	padding: 24px 36px;
+	gap: 16px;
 }
 
 .container img {
@@ -148,71 +187,71 @@ for holding text and images), and their subset styles like text and images. */
 }
 
 .container p {
-	font-family: HKGroteskRegular;
+	font-family: var(--font-body);
 	padding: 0px;
 	margin: 0px;
 }
 
 .container h3 {
-	font-family: SuperFoods;
-	font-size: 23pt;
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 36px;
 	padding: 0px;
+	padding-bottom: 4px;
 	margin: 0px;
 	letter-spacing: 1.5px;
-	color: #04004d;
+	color: var(--text);
 }
 
 .container h2 {
-	font-family: HKGroteskBold;
-	font-size: 15pt;
+	font-family: var(--font-body);
+	font-weight: 700;
+	font-size: 20px;
 	padding: 0px;
 	margin: 0px;
 }
 
 .container ul {
-	padding-left: 14.5px;
+	padding-left: 16px;
 }
 
 .container i {
-	font-family: HKGroteskItalic;
+	font-family: var(--font-body);
+	font-style: italic;
 }
 
 /* Define styles for the "next event" container. */
 #nextEvent {
-	border-radius: 0 0 1.89vmin 1.89vmin;
-	background: #ffffff;
+	border-radius: 0 0 var(--radius-card) var(--radius-card);
+	background: var(--card-bg);
 }
 
 /* Define the "text boxes" (horiontal rows that go within the columnar "containers".) */
 .textBox {
 	display: flex;
 	flex-direction: column;
-	padding: 0vmin;
+	overflow: hidden;
+	padding: 0;
 	margin: 0px;
-	gap: 6.7px;
+	gap: 8px;
+	width: 100%;
 }
 
 .textBox a:link,
 .textBox a:visited {
 	text-decoration: none;
-	color: #df0d79;
+	color: var(--link);
 	font-weight: 600;
 }
 
 /* Redefine elements when screen is below a given width, used for viewing the website on mobile. */
 @media (max-width: 600px) {
+	nav {
+		flex-direction: column;
+	}
+
 	.container {
 		flex-direction: column;
-		align-items: center;
-	}
-
-	.container img.meetupPoster {
-		width: 100%;
-		max-width: 357.6px;
-	}
-
-	.photo {
-		width: 100%;
-		height: auto;
+		padding: 16px 20px;
 	}
 }
