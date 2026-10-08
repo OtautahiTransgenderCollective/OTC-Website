@@ -1,230 +1,218 @@
 /* Load and define fonts. */
 @font-face {
-    font-family: HKGroteskRegular;
-    src: url("fonts/HKGrotesk/HKGrotesk-Regular.otf") format("opentype");
+	font-family: HKGroteskRegular;
+	src: url("fonts/HKGrotesk/HKGrotesk-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: HKGroteskItalic;
-    src: url("fonts/HKGrotesk/HKGrotesk-Italic.otf") format("opentype");
+	font-family: HKGroteskItalic;
+	src: url("fonts/HKGrotesk/HKGrotesk-Italic.otf") format("opentype");
 }
 
 @font-face {
-    font-family: HKGroteskBold;
-    src: url("fonts/HKGrotesk/HKGrotesk-Bold.otf") format("opentype");
+	font-family: HKGroteskBold;
+	src: url("fonts/HKGrotesk/HKGrotesk-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: SuperMindset;
-    src: url("fonts/SuperMindset/Super Mindset.ttf");
+	font-family: SuperMindset;
+	src: url("fonts/SuperMindset/Super Mindset.ttf");
 }
 
 @font-face {
-    font-family: SuperFoods;
-    src: url("fonts/SuperFoods/Super Foods.ttf");
+	font-family: SuperFoods;
+	src: url("fonts/SuperFoods/Super Foods.ttf");
 }
-
 
 html,
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* Define universal styles within the body section, mainly used for defining default paragraph/text formatting. */
 body {
-    line-height: 1.3;
-    color: #04004D;
-    font-family: HKGroteskRegular;
-    background:#B0D2EF;
+	line-height: 1.3;
+	color: #04004d;
+	font-family: HKGroteskRegular;
+	background: #b0d2ef;
 }
 
 /* Define "main", used for website background colour shown behind the main-stack. */
 main {
-    padding: 0px;
+	padding: 0px;
 }
-
-
-
 
 /* The main container that holds the entire stack of containers. */
 .mainStack {
-    background: #7FD0F1;
-    justify-content: center;
-    max-width: 937.8px;
-    margin: 0 auto;
-    padding-top: 0px;
-    padding-left: 2.1vmin;
-    padding-right: 2.1vmin;
-    padding-bottom: 2.1vmin;
-    background-image: url("images/UI/transFlagBackgroundFadeOut.svg");
-    background-attachment: scroll;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+	background: #7fd0f1;
+	justify-content: center;
+	max-width: 937.8px;
+	margin: 0 auto;
+	padding-top: 0px;
+	padding-left: 2.1vmin;
+	padding-right: 2.1vmin;
+	padding-bottom: 2.1vmin;
+	background-image: url("images/UI/transFlagBackgroundFadeOut.svg");
+	background-attachment: scroll;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
-
 
 /* The container used for holding the wepbages main banner image. */
 .titleImageContainer {
-    display: flex;
-    justify-content: left;
-    padding: 0px;
-    margin: 0;
+	display: flex;
+	justify-content: left;
+	padding: 0px;
+	margin: 0;
 }
 
 .titleImageContainer img {
-    width: max(43.7vmin, 378px);
-    margin-top: 13px;
-    margin-bottom: 3px;
-    max-width: 100%;
-    min-width: 0%;
+	width: max(43.7vmin, 378px);
+	margin-top: 13px;
+	margin-bottom: 3px;
+	max-width: 100%;
+	min-width: 0%;
 }
-
 
 /* Define styles for various types of images */
 .meetupPoster {
-    width: min(34.9vmin, 334.6px);
-    height: auto;
+	width: min(34.9vmin, 334.6px);
+	height: auto;
 }
 
 .transFlagPole {
-    width: max(20.7vmin, 156.8px);
-    height: auto;
+	width: max(20.7vmin, 156.8px);
+	height: auto;
 }
 
 .photo {
-    width: 45.8%;
-    height: auto;
+	width: 45.8%;
+	height: auto;
 }
 
-
 svg {
-    shape-rendering: geometricPrecision;
+	shape-rendering: geometricPrecision;
 }
 
 /* Define the navigation bar. */
 nav {
-    display: flex;
-    gap: min(8px, 1.4%);
-    padding: 10px;
-    background: #F0B5C4;
-    border-radius: 1.89vmin 1.89vmin 0px 0px;
+	display: flex;
+	gap: min(8px, 1.4%);
+	padding: 10px;
+	background: #f0b5c4;
+	border-radius: 1.89vmin 1.89vmin 0px 0px;
 }
 
 nav a:link,
 nav a:visited {
-    font-family: SuperMindset;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: clamp(9px, 3.8vw, 15.56pt);
-    -webkit-text-stroke-width: 2.66pt;
-    -webkit-text-stroke-color: #04004D;
-    paint-order: stroke fill;
+	font-family: SuperMindset;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: clamp(9px, 3.8vw, 15.56pt);
+	-webkit-text-stroke-width: 2.66pt;
+	-webkit-text-stroke-color: #04004d;
+	paint-order: stroke fill;
 }
 
 /* Define the buttons in thenavigation bar. */
 nav button {
-    background-color: #5bcefa;
-    border: none;
-    border-radius: 10.387px;
-    padding: 5px 9px 5px;
+	background-color: #5bcefa;
+	border: none;
+	border-radius: 10.387px;
+	padding: 5px 9px 5px;
 }
-
 
 /* Define the containers (general use columnar containers
 for holding text and images), and their subset styles like text and images. */
 .container {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    background: white;
-    margin-bottom: 23px;
-    padding: 0px;
-    border-radius: 1.89vmin;
-    overflow: hidden;
-    filter: drop-shadow(6.46px 6.46px #04004D);
-    padding: min(3.1vmin);
-    gap: 9.5px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	background: white;
+	margin-bottom: 23px;
+	padding: 0px;
+	border-radius: 1.89vmin;
+	overflow: hidden;
+	filter: drop-shadow(6.46px 6.46px #04004d);
+	padding: min(3.1vmin);
+	gap: 9.5px;
 }
 
 .container img {
-    display: block;
-    margin: 0px;
-    height: auto;
-    display: block;
-    
+	display: block;
+	margin: 0px;
+	height: auto;
+	display: block;
 }
 
 .container p {
-    font-family: HKGroteskRegular;
-    padding: 0px;
-    margin: 0px;
+	font-family: HKGroteskRegular;
+	padding: 0px;
+	margin: 0px;
 }
 
 .container h3 {
-    font-family: SuperFoods;
-    font-size: 23pt;
-    padding: 0px;
-    margin: 0px;
-    letter-spacing: 1.5px;
-    color: #04004D;
+	font-family: SuperFoods;
+	font-size: 23pt;
+	padding: 0px;
+	margin: 0px;
+	letter-spacing: 1.5px;
+	color: #04004d;
 }
 
 .container h2 {
-    font-family: HKGroteskBold;
-    font-size: 15pt;
-    padding: 0px;
-    margin: 0px;
+	font-family: HKGroteskBold;
+	font-size: 15pt;
+	padding: 0px;
+	margin: 0px;
 }
 
 .container ul {
-    padding-left: 14.5px;
+	padding-left: 14.5px;
 }
 
 .container i {
-    font-family: HKGroteskItalic;
+	font-family: HKGroteskItalic;
 }
-
 
 /* Define styles for the "next event" container. */
 #nextEvent {
-    border-radius: 0 0 1.89vmin 1.89vmin;
-    background: #ffffff;
+	border-radius: 0 0 1.89vmin 1.89vmin;
+	background: #ffffff;
 }
-
 
 /* Define the "text boxes" (horiontal rows that go within the columnar "containers".) */
 .textBox {
-    display: flex;
-    flex-direction: column;
-    padding: 0vmin;
-    margin: 0px;
-    gap: 6.7px;
+	display: flex;
+	flex-direction: column;
+	padding: 0vmin;
+	margin: 0px;
+	gap: 6.7px;
 }
 
 .textBox a:link,
 .textBox a:visited {
-    text-decoration: none;
-    color: #DF0D79;
-    font-weight: 600 
+	text-decoration: none;
+	color: #df0d79;
+	font-weight: 600;
 }
-
 
 /* Redefine elements when screen is below a given width, used for viewing the website on mobile. */
 @media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .container img.meetupPoster {
-        width: 100%;
-        max-width: 357.6px;
-    }
+	.container img.meetupPoster {
+		width: 100%;
+		max-width: 357.6px;
+	}
 
-    .photo {
-    width: 100%;
-    height: auto;
-    }
+	.photo {
+		width: 100%;
+		height: auto;
+	}
 }
