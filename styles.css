@@ -187,7 +187,6 @@ for holding text and images), and their subset styles like text and images. */
 	display: block;
 	margin: 0px;
 	height: auto;
-	display: block;
 }
 
 .container p {
@@ -208,6 +207,17 @@ for holding text and images), and their subset styles like text and images. */
 }
 
 .container h2 {
+	font-family: var(--font-heading);
+	font-weight: 575;
+	font-size: 29px;
+	padding: 0px;
+	padding-bottom: 4px;
+	margin: 0px;
+	letter-spacing: 1.5px;
+	color: var(--text);
+}
+
+.container h1 {
 	font-family: var(--font-body);
 	font-weight: 700;
 	font-size: 20px;
